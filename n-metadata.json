@@ -1,0 +1,9 @@
+{
+  "name":"advanced-carousel-component-neosme",
+  "version":"1.0.0",
+  "displayName":"Advanced Carousel",
+  "type":"Components",
+  "publisher":"Neutrinos",
+  "platformSupportVersion":"7.0.2",
+  "packageType":"studio-package"
+}
