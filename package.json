@@ -8,6 +8,15 @@
   },
   "author": "",
   "license": "ISC",
+  "nModule": {
+    "name": "neo-carousel",
+    "version": "0.0.1",
+    "packageType": "angular-package",
+    "importStatement": "import { NgxGalleryModule } from 'neo-carousel';",
+    "imports": [
+      "NgxGalleryModule"
+    ]
+  },
   "dependencies": {
     "@jatahworx/bhive-toolkits": "^6.2.1",
      "neo-carousel": "0.0.1"
