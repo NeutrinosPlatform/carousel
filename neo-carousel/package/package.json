@@ -1,0 +1,22 @@
+{
+  "name": "neo-carousel",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0"
+  },
+  "main": "bundles/neo-carousel.umd.js",
+  "module": "fesm5/neo-carousel.js",
+  "es2015": "fesm2015/neo-carousel.js",
+  "esm5": "esm5/neo-carousel.js",
+  "esm2015": "esm2015/neo-carousel.js",
+  "fesm5": "fesm5/neo-carousel.js",
+  "fesm2015": "fesm2015/neo-carousel.js",
+  "typings": "neo-carousel.d.ts",
+  "metadata": "neo-carousel.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "studioVersion" : "7.0.2"
+}
