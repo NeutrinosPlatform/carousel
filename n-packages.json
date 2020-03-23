@@ -1,0 +1,14 @@
+{
+    "packages": [
+        {
+            "name": "advanced-carousel-component-neosme",
+            "version": "1.0.0",
+            "packageType": "studio-package"
+        },
+        {
+            "name": "neo-carousel",
+            "version": "0.0.1",
+            "packageType": "angular-package"
+        }        
+    ]
+}
