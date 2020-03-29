@@ -12,12 +12,10 @@
     left: 16px;
 }
 .leftArrow{
-    margin-top: 9%;
     font-size: 21px; 
     margin-right: 2%;
 }
 .rightArrow{
-    margin-top: 9%;
     font-size: 21px; 
     margin-left: 2%;
 }
@@ -32,19 +30,19 @@
     outline: none!important;
 }
 .container{
-    display: flex; 
-    justify-content: center; 
-    width:100%;
+    /* display: flex; 
+    justify-content: center;  */
+    width:56%;
 }
 .imagecontainer{
     display: flex;
-    width:58%;
+    align-items: center;
 }
 .image{
     height: 9.5em!important;
-    min-width: 29em!important;
+    /* min-width: 29em!important;
     background-size: 2.5em;
-    margin-top: 6%;
+    margin-top: 6%; */
 }
 .imageLabel{
     display: flex;
@@ -88,8 +86,14 @@
 }
 .imagecontainer > div{
     background: url("../assets/images/silder-image-small.png") no-repeat center !important;
-    background-size: 8%!important;
-    margin-top:0px !important;
+    background-size: 50px!important;
+    margin-top: 0px !important;
+
+}
+.whole-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 [component-label]::after {  
     font-size: 14px !important;

@@ -8,7 +8,7 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
     const name = "advanced-carousel-neosme";
     const designerTemplate = `
     <advanced-carousel-neosme class="ad-element view">
-            <div>
+            <div class="whole-container">
                 <div class="inline-block container">
                    <div class="imagecontainer">
                         <p class="leftArrow"><</p>                        
