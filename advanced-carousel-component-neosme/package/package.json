@@ -8,9 +8,17 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@jatahworx/bhive-toolkits": "^6.2.1",
-     "neo-carousel": "0.0.1"
+  "nModule": {
+    "name": "neo-calendar",
+    "version": "0.0.1",
+    "packageType": "angular-package",
+    "importStatement": "import { NgxGalleryModule  } from 'neo-carousel';",
+    "imports": [
+      "NgxGalleryModule"
+    ]
   },
-  "studioVersion" : "7.0.2"
+  "dependencies": {
+    "@jatahworx/bhive-toolkits": "^6.2.1",   
+     "neo-carousel": "0.0.1"
+  }
 }
