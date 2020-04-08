@@ -241,15 +241,18 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
     let previewOpen = componentAttribute.PreviewOpen['_value']
     let previewClose = componentAttribute.PreviewClose['_value'];
     let imageArray = componentAttribute.Images['_value'];
+    let classValue = componentAttribute.class['_value'];
+
+
 
     // Ngx-gallery
     let template = '';
     let galleryOptionsValue = {
-        width: componentAttribute.Width['_value'] ? componentAttribute.Width['_value'] : '600px',
-        height: componentAttribute.Height['_value'] ? componentAttribute.Height['_value'] : '400px',
+        width: componentAttribute.Width['_value'] ? componentAttribute.Width['_value'] : "'600px'",
+        height: componentAttribute.Height['_value'] ? componentAttribute.Height['_value'] : "'400px'",
         thumbnailsColumns: 4,
         imageAnimation: 'Slide',
-        startIndex: componentAttribute.StartIndex['_value'] ? parseInt(componentAttribute.StartIndex['_value']) : 0,
+        startIndex: componentAttribute.StartIndex['_value'] ? componentAttribute.StartIndex['_value'] : 0,
         imageDescription: componentAttribute.ShowImageDescription['_value'] === 'true' ? true : false,
 
         imageArrows: componentAttribute.ImageArrows['_value'] === 'true' ? true : false,
@@ -261,24 +264,25 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
         previewSwipe: componentAttribute.EnablePreviewSwipe['_value'] === 'true' ? true : false,
 
         imageAutoPlay: componentAttribute.ImageAutoPlay['_value'] === 'true' ? true : false,
-        imageAutoPlayInterval: componentAttribute.ImageAutoPlayInterval['_value'] ? parseInt(componentAttribute.ImageAutoPlayInterval['_value']) : 2000,
+        imageAutoPlayInterval: componentAttribute.ImageAutoPlayInterval['_value'] ? componentAttribute.ImageAutoPlayInterval['_value'] : 2000,
         imageAutoPlayPauseOnHover: componentAttribute.PauseOnHover['_value'] === 'true' ? true : false,
         imageInfinityMove: componentAttribute.ImageInfinityMove['_value'] === 'true' ? true : false,
 
         preview: componentAttribute.ShowPreview['_value'] === 'true' ? true : false,
 
-        arrowPrevIcon: componentAttribute.PreviewLeftArrow['_value'] ? componentAttribute.PreviewLeftArrow['_value'] : "arrow_back_ios", 
-        arrowNextIcon: componentAttribute.PreviewRightArrow['_value'] ? componentAttribute.PreviewRightArrow['_value'] : "arrow_forward_ios", 
+        arrowPrevIcon: componentAttribute.PreviewLeftArrow['_value'] ? componentAttribute.PreviewLeftArrow['_value'] : "'arrow_back_ios'", 
+        arrowNextIcon: componentAttribute.PreviewRightArrow['_value'] ? componentAttribute.PreviewRightArrow['_value'] : "'arrow_forward_ios'", 
 
-        previewPrevIcon: componentAttribute.CarouselLeftArrow['_value'] ? componentAttribute.CarouselLeftArrow['_value'] : "arrow_back_ios", 
-        previewNextIcon: componentAttribute.CarouselRightArrow['_value'] ? componentAttribute.CarouselRightArrow['_value'] : "arrow_forward_ios",
+        previewPrevIcon: componentAttribute.CarouselLeftArrow['_value'] ? componentAttribute.CarouselLeftArrow['_value'] : "'arrow_back_ios'", 
+        previewNextIcon: componentAttribute.CarouselRightArrow['_value'] ? componentAttribute.CarouselRightArrow['_value'] : "'arrow_forward_ios'",
 
         thumbnails: componentAttribute.ShowNavigator['_value'] === 'true' ? true :  false,
       };
 
       
-    template = `ngx-gallery  %style%  %class% [widthOption] = "'${galleryOptionsValue.width}'"
-    [heightOption] = "'${galleryOptionsValue.height}'"
+      
+    template = `ngx-gallery  %style%  [widthOption] = "${galleryOptionsValue.width}"
+    [heightOption] = "${galleryOptionsValue.height}"
     [thumbnailsOption] = "${galleryOptionsValue.thumbnails}"
     [thumbnailsColumnsOption] = "${galleryOptionsValue.thumbnailsColumns}"
     [startIndexOption] = "${galleryOptionsValue.startIndex}"
@@ -294,12 +298,17 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
     [imageAutoPlayPauseOnHoverOption] =  "${galleryOptionsValue.imageAutoPlayPauseOnHover}"
     [imageInfinityMoveOption] =  "${galleryOptionsValue.imageInfinityMove}"
     [previewOption] =  "${galleryOptionsValue.preview}"
-    [arrowPrevIconOption] =  "'${galleryOptionsValue.arrowPrevIcon}'"
-    [arrowNextIconOption] =  "'${galleryOptionsValue.arrowNextIcon}'"
-    [previewPrevIconOption] =  "'${galleryOptionsValue.previewPrevIcon}'"
-    [previewNextIconOption] =  "'${galleryOptionsValue.previewNextIcon}'" [images]="${imageArray}"`;
+    [arrowPrevIconOption] =  "${galleryOptionsValue.arrowPrevIcon}"
+    [arrowNextIconOption] =  "${galleryOptionsValue.arrowNextIcon}"
+    [previewPrevIconOption] =  "${galleryOptionsValue.previewPrevIcon}"
+    [previewNextIconOption] =  "${galleryOptionsValue.previewNextIcon}" [images]="${imageArray}"`;
     if (change !== "") {
       template = template + `(change)="${change}"`
+    }
+    if(classValue!==null){
+      classValue = classValue.toString();
+      classValue = classValue.replace(",", " ");
+      template = template + `class = "${classValue}"`
     }
     if(previewChange !== ""){
       template = template + `(previewChange)="${previewChange}"`
