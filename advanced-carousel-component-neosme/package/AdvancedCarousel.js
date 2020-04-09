@@ -243,8 +243,6 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
     let imageArray = componentAttribute.Images['_value'];
     let classValue = componentAttribute.class['_value'];
 
-
-
     // Ngx-gallery
     let template = '';
     let galleryOptionsValue = {
@@ -253,22 +251,36 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
         thumbnailsColumns: 4,
         imageAnimation: 'Slide',
         startIndex: componentAttribute.StartIndex['_value'] ? componentAttribute.StartIndex['_value'] : 0,
-        imageDescription: componentAttribute.ShowImageDescription['_value'] === 'true' ? true : false,
 
-        imageArrows: componentAttribute.ImageArrows['_value'] === 'true' ? true : false,
+        imageDescription: componentAttribute.ShowImageDescription['_value'] === 'true' ? true 
+        : componentAttribute.ShowImageDescription['_value'] === 'false' ? false : componentAttribute.ShowImageDescription['_value'],
+
+        imageArrows: componentAttribute.ImageArrows['_value'] === 'true' ? true 
+        : componentAttribute.ImageArrows['_value'] === 'false' ? false : componentAttribute.ImageArrows['_value'],
         thumbnailsArrows: true,
-        previewArrows: componentAttribute.ShowPreviewArrows['_value'] === 'true' ? true : false,
 
-        imageSwipe: componentAttribute.ImageSwipe['_value'] === 'true' ? true : false,
+        previewArrows: componentAttribute.ShowPreviewArrows['_value'] === 'true' ? true 
+        : componentAttribute.ShowPreviewArrows['_value'] === 'false' ? false : componentAttribute.ShowPreviewArrows['_value'],
+
+        imageSwipe: componentAttribute.ImageSwipe['_value'] === 'true' ? true 
+        : componentAttribute.ImageSwipe['_value'] === 'false' ? false : componentAttribute.ImageSwipe['_value'],
         thumbnailsSwipe: true,
-        previewSwipe: componentAttribute.EnablePreviewSwipe['_value'] === 'true' ? true : false,
 
-        imageAutoPlay: componentAttribute.ImageAutoPlay['_value'] === 'true' ? true : false,
+        previewSwipe: componentAttribute.EnablePreviewSwipe['_value'] === 'true' ? true 
+        : componentAttribute.EnablePreviewSwipe['_value'] === 'false' ? false : componentAttribute.EnablePreviewSwipe['_value'],
+
+        imageAutoPlay: componentAttribute.ImageAutoPlay['_value'] === 'true' ? true 
+        : componentAttribute.ImageAutoPlay['_value'] === 'false' ? false : componentAttribute.ImageAutoPlay['_value'],
         imageAutoPlayInterval: componentAttribute.ImageAutoPlayInterval['_value'] ? componentAttribute.ImageAutoPlayInterval['_value'] : 2000,
-        imageAutoPlayPauseOnHover: componentAttribute.PauseOnHover['_value'] === 'true' ? true : false,
-        imageInfinityMove: componentAttribute.ImageInfinityMove['_value'] === 'true' ? true : false,
 
-        preview: componentAttribute.ShowPreview['_value'] === 'true' ? true : false,
+        imageAutoPlayPauseOnHover: componentAttribute.PauseOnHover['_value'] === 'true' ? true 
+        : componentAttribute.PauseOnHover['_value'] === 'false' ? false : componentAttribute.PauseOnHover['_value'],
+
+        imageInfinityMove: componentAttribute.ImageInfinityMove['_value'] === 'true' ? true 
+        : componentAttribute.ImageInfinityMove['_value'] === 'false' ? false : componentAttribute.ImageInfinityMove['_value'],
+
+        preview: componentAttribute.ShowPreview['_value'] === 'true' ? true 
+        : componentAttribute.ShowPreview['_value'] === 'false' ? false : componentAttribute.ShowPreview['_value'],
 
         arrowPrevIcon: componentAttribute.PreviewLeftArrow['_value'] ? componentAttribute.PreviewLeftArrow['_value'] : "'arrow_back_ios'", 
         arrowNextIcon: componentAttribute.PreviewRightArrow['_value'] ? componentAttribute.PreviewRightArrow['_value'] : "'arrow_forward_ios'", 
@@ -276,10 +288,9 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
         previewPrevIcon: componentAttribute.CarouselLeftArrow['_value'] ? componentAttribute.CarouselLeftArrow['_value'] : "'arrow_back_ios'", 
         previewNextIcon: componentAttribute.CarouselRightArrow['_value'] ? componentAttribute.CarouselRightArrow['_value'] : "'arrow_forward_ios'",
 
-        thumbnails: componentAttribute.ShowNavigator['_value'] === 'true' ? true :  false,
+        thumbnails: componentAttribute.ShowNavigator['_value'] === 'true' ? true 
+        : componentAttribute.ShowNavigator['_value'] === 'false' ? false : componentAttribute.ShowNavigator['_value']
       };
-
-      
       
     template = `ngx-gallery  %style%  [widthOption] = "${galleryOptionsValue.width}"
     [heightOption] = "${galleryOptionsValue.height}"
