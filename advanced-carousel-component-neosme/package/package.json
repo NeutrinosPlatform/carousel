@@ -8,6 +8,7 @@
   },
   "author": "",
   "license": "ISC",
+  "studioVersion": "7.0.2",
   "nModule": {
     "name": "neo-calendar",
     "version": "0.0.1",
@@ -18,7 +19,7 @@
     ]
   },
   "dependencies": {
-    "@jatahworx/bhive-toolkits": "^6.2.1",   
-     "neo-carousel": "0.0.1"
+    "@jatahworx/bhive-toolkits": "7.0.2",
+	  "neo-carousel": "0.0.1"
   }
 }
