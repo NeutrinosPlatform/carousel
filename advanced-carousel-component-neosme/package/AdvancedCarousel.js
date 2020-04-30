@@ -241,7 +241,6 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
     let previewOpen = componentAttribute.PreviewOpen['_value']
     let previewClose = componentAttribute.PreviewClose['_value'];
     let imageArray = componentAttribute.Images['_value'];
-    let classValue = componentAttribute.class['_value'];
 
     // Ngx-gallery
     let template = '';
