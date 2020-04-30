@@ -270,7 +270,7 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
         imageAnimation: 'Slide'
       };
       
-    template = `ngx-gallery  %style%  [widthOption] = "${galleryOptionsValue.width}"
+    template = `ngx-gallery %style% %class% [widthOption] = "${galleryOptionsValue.width}"
     [heightOption] = "${galleryOptionsValue.height}"
     [thumbnailsOption] = "${galleryOptionsValue.thumbnails}"
     [thumbnailsColumnsOption] = "${galleryOptionsValue.thumbnailsColumns}"
@@ -290,14 +290,10 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
     [arrowPrevIconOption] =  "${galleryOptionsValue.arrowPrevIcon}"
     [arrowNextIconOption] =  "${galleryOptionsValue.arrowNextIcon}"
     [previewPrevIconOption] =  "${galleryOptionsValue.previewPrevIcon}"
-    [previewNextIconOption] =  "${galleryOptionsValue.previewNextIcon}" [images]="${imageArray}"`;
+    [previewNextIconOption] =  "${galleryOptionsValue.previewNextIcon}" 
+    [images] = "${imageArray}"`;
     if (change !== "") {
       template = template + `(change)="${change}"`
-    }
-    if(classValue!==null){
-      classValue = classValue.toString();
-      classValue = classValue.replace(",", " ");
-      template = template + `class = "${classValue}"`
     }
     if(previewChange !== ""){
       template = template + `(previewChange)="${previewChange}"`
