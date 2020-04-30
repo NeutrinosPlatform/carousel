@@ -17,5 +17,6 @@
   "sideEffects": false,
   "dependencies": {
     "tslib": "^1.9.0"
-  }
+  },
+  "studioVersion": "7.0.2"
 }
