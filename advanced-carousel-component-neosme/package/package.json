@@ -10,7 +10,7 @@
   "license": "ISC",
   "studioVersion": "7.0.2",
   "nModule": {
-    "name": "neo-calendar",
+    "name": "neo-carousel",
     "version": "0.0.1",
     "packageType": "angular-package",
     "importStatement": "import { NgxGalleryModule  } from 'neo-carousel';",
