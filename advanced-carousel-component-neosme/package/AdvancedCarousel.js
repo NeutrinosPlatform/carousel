@@ -7,7 +7,7 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
   constructor() {
     const name = "advanced-carousel-neosme";
     const designerTemplate = `
-    <advanced-carousel-neosme class="ad-element view">
+    <advanced-carousel-neosme class="ad-element flex-shrink-0 flex-grow-1">
             <div class="whole-container">
                 <div class="inline-block container">
                    <div class="imagecontainer">
@@ -241,6 +241,7 @@ module.exports = class AdvancedCarousel extends AdvancedComponent {
     let previewOpen = componentAttribute.PreviewOpen['_value']
     let previewClose = componentAttribute.PreviewClose['_value'];
     let imageArray = componentAttribute.Images['_value'];
+    let classValue = componentAttribute.class['_value'];
 
     // Ngx-gallery
     let template = '';
